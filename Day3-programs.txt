@@ -1,0 +1,320 @@
+let a = [43,67,91,46,38,21,72];
+const op = [];
+const opp = [];
+console.log("anonymous function");
+let oddNumber = function(value, arrayindex){
+        if(value%2==0)
+        {
+           op.push(value);
+        }
+}
+for(let i =0; i<a.length; i++)
+{
+oddNumber(a[i],i);
+}
+console.log(op);
+console.log("IIFE function");
+(function(){
+    for(let i =0; i<a.length; i++){
+        if(a[i]%2==0)
+        {
+            console.log(a[i]);
+        }
+    }
+}
+)();
+
+const OddNumber = (value1) =>{
+        if(value1%2==0)
+        {
+            opp.push(value1);
+        }
+}
+
+for(let i =0;i<a.length; i++)
+{
+    OddNumber(a[i]);
+}
+console.log(opp);
+
+let b = ['a','b','c','d','e'];
+
+let Caps1 = [];
+let Caps2 = [];
+let Caps3 = [];
+console.log("Anonymous function");
+let CapsLetter = function(){
+    for(let i =0; i<b.length; i++)
+    {
+        Caps1.push(b[i].toUpperCase());
+    }
+    console.log(Caps1);
+}
+CapsLetter();
+
+console.log("IIFE function");
+(function(){
+    for(let i =0; i<b.length; i++){
+           Caps2.push(b[i].toUpperCase()); 
+    }
+    console.log(Caps2);
+}
+)();
+
+console.log("Arrow function");
+
+const CapsLetter1  = () =>{
+    for(let i =0;i<b.length; i++)
+    {
+          Caps3.push(b[i].toUpperCase());
+    }
+    console.log(Caps3);
+}
+CapsLetter1();
+
+let c = [3,4,5,6,7,8];
+
+let sum = 0;
+let sum1 = 0;
+let sum2 = 0;
+console.log("Anonymous function");
+
+const SumArray1 = function(){
+    for(let i =0; i <c.length; i++)
+    {
+        sum +=c[i];
+    }
+    console.log("Sum of array values " + sum);
+}
+SumArray1();
+
+console.log("IIFE function");
+
+(function(){
+    for(let i =0; i <c.length; i++)
+    {
+        sum1 +=c[i];
+    }
+    console.log("Sum of array values " + sum1);
+})();
+
+console.log("Arrow function");
+const SumArray2 = () =>{
+    for(let i =0; i <c.length; i++)
+    {
+        sum2 +=c[i];
+    }
+    console.log("Sum of array values " + sum2);
+}
+SumArray2();
+
+
+let d = [2,3,4,5,6,7,8,11,31,55,66,61,54];
+let primeNumber1 =[];
+let primeNumber2 =[];
+let primeNumber3 =[];
+
+console.log("Anonymous function");
+
+const Prime = function(){
+    for(let i =0;i<d.length;i++)
+    {
+        let num =d[i];
+        let count =0;
+        for(let i=1;i<=num;i++)
+        {
+            if(num%i==0)
+            {
+                count++;
+            }
+        }
+        if(count==2)
+        {
+            primeNumber1.push(d[i]);
+        }
+        count =0;
+    }
+    console.log("Prime Numbers in given array "+ primeNumber1);
+}
+
+Prime();
+
+console.log("IIFE function");
+
+(function(){
+    for(let i =0;i<d.length;i++)
+    {
+        let num =d[i];
+        let count =0;
+        for(let i=1;i<=num;i++)
+        {
+            if(num%i==0)
+            {
+                count++;
+            }
+        }
+        if(count==2)
+        {
+            primeNumber2.push(d[i]);
+        }
+        count =0;
+    }
+    console.log("Prime Numbers in given array "+ primeNumber2);
+})();
+
+console.log("Arrow function");
+
+const Prime1= () =>{
+    for(let i =0;i<d.length;i++)
+    {
+        let num =d[i];
+        let count =0;
+        for(let i=1;i<=num;i++)
+        {
+            if(num%i==0)
+            {
+                count++;
+            }
+        }
+        if(count==2)
+        {
+            primeNumber3.push(d[i]);
+        }
+        count =0;
+    }
+    console.log("Prime Numbers in given array "+ primeNumber3);
+}
+Prime1();
+
+console.log("Anonymous function");
+
+let e = ['madam','121','999','test','loop'];
+
+let palindromeArr1 = [];
+let palindromeArr2 = [];
+let palindromeArr3 = [];
+
+const palindrome1 = function(){
+      for(let i=0;i<e.length;i++)
+      {
+        let string =e[i].split('').reverse().join('');
+        if(string==e[i])
+        {
+         palindromeArr1.push(e[i]);
+        }
+      }
+      console.log("list of palindrome in given array ->" + palindromeArr1);
+}
+palindrome1();
+
+console.log("IIFE function");
+(function(){
+    for(let i=0;i<e.length;i++)
+    {
+      let string =e[i].split('').reverse().join('');
+      if(string==e[i])
+      {
+       palindromeArr2.push(e[i]);
+      }
+    }
+    console.log("list of palindrome in given array ->" + palindromeArr2);
+})();
+
+console.log("Arrow function");
+
+const palindrome2 = () =>{
+    for(let i=0;i<e.length;i++)
+    {
+      let string =e[i].split('').reverse().join('');
+      if(string==e[i])
+      {
+       palindromeArr3.push(e[i]);
+      }
+    }
+    console.log("list of palindrome in given array ->" + palindromeArr3);
+}
+palindrome2();
+
+console.log("Anonymous function");
+
+const Array1 = [7,3,1];
+const Array2 = [4,5,6];
+const mergedArray = Array1.concat(Array2);
+const sortedArray = [...mergedArray].sort((a,b) =>a-b);
+const length = sortedArray.length;
+const median = function(Array1,Array2){
+    if(length%2==0)
+    {
+      let middle1 = sortedArray[length/2 -1];
+      let middle2 = sortedArray[length/2];
+      console.log("Median of two sorted array "+ (middle1+middle2)/2);
+    }
+    else
+    {
+      console.log("Median of two sorted array "+ sortedArray[Math.floor(length/2)]);
+    }
+}
+median(Array1,Array2);
+
+console.log("IIFE function");
+(function(Array1,Array2){
+    if(length%2==0)
+    {
+      let middle1 = sortedArray[length/2 -1];
+      let middle2 = sortedArray[length/2];
+      console.log("Median of two sorted array "+ (middle1+middle2)/2);
+    }
+    else
+    {
+      console.log("Median of two sorted array "+ sortedArray[Math.floor(length/2)]);
+    }
+})(Array1,Array2);
+
+console.log("Anonymous function");
+
+const g = [1,2,3,4,5,1,2];
+let duplicate = [];
+let duplicate1 = [];
+const dup = function(){
+for(let i=0;i<g.length;i++){
+    if(!duplicate.includes(g[i])){
+        duplicate.push(g[i]);
+    }
+}
+console.log(duplicate);
+}
+dup();
+
+console.log("IIFE function");
+(function(){
+    for(let i=0;i<g.length;i++){
+        if(!duplicate1.includes(g[i])){
+            duplicate1.push(g[i]);
+        }
+    }
+    console.log(duplicate1);
+})();
+
+console.log("Anonymous function");
+
+let k =2;
+let ar =[1,2,3,4];
+const rotateArray = function(){
+for(let i=0;i<k;i++)
+{
+  ar.unshift(ar.pop());
+}
+console.log(ar);
+}
+rotateArray();
+
+console.log("IIFE function");
+
+let ar1 =[1,2,3,4,5];
+(function(){
+    for(let i=0;i<k;i++)
+    {
+      ar1.unshift(ar1.pop());
+    }
+    console.log(ar1);
+})();
